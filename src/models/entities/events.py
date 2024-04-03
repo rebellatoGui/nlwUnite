@@ -2,7 +2,7 @@ from src.models.settings.base import Base
 from sqlalchemy import Column, String, Integer
 
 class Events(Base):
-    _tablename_ = "events"
+    __tablename__ = "events"
     
     id = Column(String, primary_key=True)
     title = Column(String, nullable=False)
