@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 class __DBConnectionHandler:
-    def _init_(self) -> None:
+    def __init__(self) -> None:
          self.__connection_string = "{}:///{}".format (
          "sqlite",
          "storage.db"
