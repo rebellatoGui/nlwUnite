@@ -1,39 +1,52 @@
-# Especificações
+<h1 align="center"> pass.in - NLW Unite 🎟️</h1>
 
-✪ Pass.in
+<p align="center">
+API de gestão de participantes em eventos presenciais, com inscrição, credencial e check-in
+</p>
 
-O pass.in é uma aplicação de **gestão de participantes em eventos presenciais**.
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>
+</p>
 
-A ferramenta permite que o organizador cadastre um evento e abra uma página pública de inscrição.
+<p align="center">
+  <img alt="Capa pass.in - NLW Unite" src="assets/readme-preview.png" style="border-radius: 10px;">
+<br>
 
-Os participantes inscritos podem emitir uma credencial para check-in no dia do evento.
+## 🚀 Tecnologias
 
-O sistema fará um scan da credencial do participante para permitir a entrada no evento.
-![especs pass in](https://github.com/rebellatoGui/nlwUnite/assets/146299321/0950f230-5c25-4642-8644-d3e7a3fa15ff)
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-## Requisitos
+- Python
+- Flask e Flask-CORS
+- SQLAlchemy
+- SQLite
+- Pytest
+- Git e Github
 
-### Requisitos funcionais
+## 💻 Projeto
 
-- [ ]  O organizador deve poder cadastrar um novo evento;
-- [ ]  O organizador deve poder visualizar dados de um evento;
-- [ ]  O organizador deve poser visualizar a lista de participantes;
-- [ ]  O participante deve poder se inscrever em um evento;
-- [ ]  O participante deve poder visualizar seu crachá de inscrição;
-- [ ]  O participante deve poder realizar check-in no evento;
+- O pass.in é uma API para gestão de participantes em eventos presenciais, desenvolvida durante o NLW Unite da Rocketseat. O organizador cadastra um evento com limite de vagas, os participantes se inscrevem, visualizam a credencial de inscrição e fazem check-in no dia do evento, com regras que impedem inscrição duplicada, inscrição em evento lotado e check-in repetido.
 
-### Regras de negócio
+- A aplicação segue uma arquitetura em camadas: rotas Flask, handlers com as regras de negócio, repositórios com SQLAlchemy sobre um banco SQLite (schema em `init/`) e tratamento centralizado de erros HTTP (404 e 409). Os repositórios têm testes com Pytest.
 
-- [ ]  O participante só pode se inscrever em um evento uma única vez;
-- [ ]  O participante só pode se inscrever em eventos com vagas disponíveis;
-- [ ]  O participante só pode realizar check-in em um evento uma única vez;
+<h2 align="center">📌 Desenvolvedores</h2>
 
-### Requisitos não-funcionais
+<table align="center">
+  <tr>
+    <td align="center">
+      <a href="https://github.com/rebellatoGui" title="GitHub">
+        <img src="https://avatars.githubusercontent.com/u/146299321?v=4" width="100px;" alt="Foto do Guilherme Rebellato no GitHub"/><br>
+        <sub>
+          <b>Guilherme Rebellato</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
 
-- [ ]  O check-in no evento será realizado através de um QRCode;
+<br>
 
-## Banco de dados
+---
 
-Nessa aplicação vamos utilizar banco de dados relacional (SQL). Para ambiente de desenvolvimento seguiremos com o SQLite pela facilidade do ambiente.
-
-![diagrama ERD](https://github.com/rebellatoGui/nlwUnite/assets/146299321/089f3e5c-2d73-416a-813d-9d33458de0df)
+<p align="center">Feito com ♥ por rebellatoGui</p>
